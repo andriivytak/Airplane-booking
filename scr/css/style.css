@@ -43,6 +43,13 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a {
+    text-decoration: none;
+  }
+li{
+    text-decoration: none;
+}  
+
 img {
   max-width: 100%;
   display: block;
@@ -64,4 +71,361 @@ button, input[type="submit"], input[type="reset"] {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  
+  /* Container */
+  
+  .container{
+    width: 100%;
+    max-width: 1130px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  
+  
+  /* Header */
+  
+  .header__navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .header__links{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .header__links-item{
+    margin-right: 20px;
+    text-decoration: none;
+    color:#181818;
+    font-size: 14px;
+  }
+  
+  .header__links-item::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background: #181818;
+    width: 0;
+    transition: all .4s linear;
+  }
+  
+  .header__links-item:hover::after{
+    width: 100%;
+  }
+  
+  
+  .header__button{
+    padding: 6px 25px;
+    border-radius: 5px;
+    transition: all .4s linear;
+    margin-right: 10px;
+  }
+  
+  .header__button:last-child{
+    margin-right: 0;
+  }
+  .header__button:hover{
+      color:#FFF;
+      background: #656293;
+  }
+  /* Intro */
+  
+  .intro{
+    padding-top: 40px;
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../img/bg-image.jpg');
+    background-size: cover;
+  }
+  
+  .intro__inner{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    color: #151515;
+  }
+  
+  .intro__title b{
+    text-transform: uppercase;
+    color: #656293;
+  }
+  
+  .intro__title,
+  .intro__subtitle{
+    font-size: 66px;
+    line-height: 1.2;
+  }
+  
+  .intro__subtitle{
+    margin-bottom: 45px;
+  }
+  
+  .intro__explore{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 2px 5px;
+    transition: all .3s linear;
+  
+  }
+  
+  
+  .intro__arrow{
+    display: inline-block;
+    vertical-align: middle;
+    transition: all .3s linear;
+    font-size: 22px;
+  
+  }
+  
+  
+  
+  .intro__link{
+    text-decoration: none;
+    color:#151515;
+  }
+  
+  .intro__link:hover .intro__arrow{
+    margin-left: 7px;
+  
+  }
+  
+  .intro__link:hover .intro__explore{
+    
+      background-color:#656293;
+      color:#FFF;
+      border-radius: 5px;
+  
+  }
+  
+  
+  
+  /* Booking */
+  .booking{
+      position: relative;
+      top: -100px;
+      z-index: 10;
+  }
+  .booking__inner{
+      display: block;
+    position: relative;
+    padding: 35px 30px ;
+    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+    border-radius: 12px;
+    background-color: #FFF;
+    
+  }
+
+  .booking__header{
+      margin-bottom: 25px;
+  }
+  
+  .booking__dropdowns{
+    display: flex;
+  }
+  
+  
+  .booking__body{
+      position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+  
+  .booking__destination{
+      width: 28%;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 16px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking__revert{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #AAAAAA;
+    border-radius: 50%;
+    transition: transform .5s linear;
+    margin: 0 7px;
+    cursor: pointer;
+  }
+  
+  .booking__revert:hover{
+    transform:rotate(180deg);
+  }
+  .booking__title{
+    font-size: 14px;
+    color:#737373;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+  .booking__abbreviation{
+    font-size: 24px;
+    font-weight: 600;
+    color: #151515;
+    
+  }
+  
+  .booking__airport{
+    font-size: 14px;
+    color:#737373;
+    
+  }
+  
+
+  .booking__dates{
+      width: 35%;
+      display: flex;
+      padding: 16px 20px;
+      border: 1px solid #AAAAAA;
+    border-radius: 10px;
+  }
+
+  .booking__departure{
+      margin-right: 20px;
+  }
+  
+  .booking__date{
+      display: inline-block;
+      font-weight: 600;
+      color:#151515;
+      font-size: 24px;
+
+  }
+
+
+  .booking__calendar{
+      font-size: 18px;
+      margin-left: 5px;
+      cursor: pointer;
+  }
+
+
+  .booking__buttons{
+      color:#15151599;
+      opacity: .6;
+      
+  }
+
+  .booking__btn{
+      position: relative;
+      transition: all .5s linear;
+      cursor: pointer;
+  }
+  .booking__btn::after{
+    content: '';
+    display: block;
+ 
+    background: #15151599;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .4s all linear;
+  }
+
+  .booking__btn:hover::after{
+      width: 100%;
+  }
+
+  .booking__footer{
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: #151515;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .booking__button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background: #656293;
+    border-radius: 10px;
+    padding: 27px 30px;
+    text-align:left;
+    width: 250px;
+    color:#FFF;
+    
+  }
+
+ .white-arrow{
+     display: inline-block;
+     vertical-align: middle;
+     margin-left: 15px;
+     transition: all .4s linear;
+    
+ }
+
+ .booking__button:hover .white-arrow{
+     margin-left: 30px;
+ }
+
+
+ /* Dropdowns */
+
+.booking__dropdowns-header{
+    display: block;
+    margin-right: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.booking__dropdowns-header a{
+    color: #151515;
+}
+
+.booking__dropdown{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all .4s linear;
+    top: 60px;
+    left: 30px;
+}
+
+.booking__dropdowns-header:hover > .booking__dropdown,
+.booking__dropdowns-header:focus-within > .booking__dropdown,
+.booking__dropdown:hover,
+.booking__dropdown:focus{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown__item{
+    margin-right: 4px;
+}
+
+.booking__link{
+    position: relative;
+}
+  
+.dropdown-arrow{
+   position: absolute;
+   top: -2px;
+    right: -20px;
 }

@@ -1,12 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="scr/css/style.css">
+    <title>Airplane tickets</title>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <div class="intro">
+            <div class="container">
+                <header class="header">
+                    <nav class="header__navbar">
+                        <div class="header__logo">
+                            <a href="#">
+                                <img src="scr//img/Logo.svg" alt="logos">
+                            </a>
+                        </div>
+                        <ul class="header__links">
+                            <a href="" class="header__links-item">
+                                <li>Home </li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Booking</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Private Jet</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Specification</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li> Luxury Charters</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Membership</li>
+                            </a>
+                        </ul>
+                        <div class="header__buttons">
+                            <button class="header__button">Register</button>
+                            <button class="header__button">Sign In</button>
+                        </div>
+                    </nav>
+                </header>
+
+                <div class="intro__inner">
+                    <h1 class="intro__title">Enjoy <b> Reserved </b></h1>
+                    <h2 class="intro__subtitle"> Overhead bin space</h2>
+                    <a href="" class="intro__link">
+                        <div class="intro__explore">Explore Now</div>
+                        <i class="fa-solid fa-arrow-right intro__arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking">
+            <div class="container">
+                <div class="booking__inner">
+                    <div class="booking__header">
+                        <ul class="booking__dropdowns">
+
+                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
+                                    <img src="/scr/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
+                                        class="dropdown-arrow">
+                                </a>
+
+                                <ul class="booking__dropdown">
+                                    <li class="dropdown__item"><a href="#">Option 1</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 2</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 3</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 4</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
+                                    <img src="/scr/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
+                                        class="dropdown-arrow">
+                                </a>
+                                <ul class="booking__dropdown">
+                                    <li class="dropdown__item"><a href="#">Option 5</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 6</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 7</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 8</a></li>
+                                </ul>
+                            </li>
+                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
+                                    <img src="/scr/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
+                                        class="dropdown-arrow">
+                                </a>
+                                <ul class="booking__dropdown">
+                                    <li class="dropdown__item"><a href="#">Option 9</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 11</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 12</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 13</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="booking__body">
+                        <div class="booking__destination">
+                            <div class="booking__title">from</div>
+                            <div class="booking__abbreviation">lax</div>
+                            <div class="booking__airport">Los Angeles Intl Arpt,Los Angeles</div>
+                        </div>
+                        <div class="booking__reverse">
+                            <i class="fa-solid fa-arrow-right-arrow-left booking__revert"></i>
+                        </div>
+                        <div class="booking__destination">
+                            <div class="booking__title">to</div>
+                            <div class="booking__abbreviation">mia</div>
+                            <div class="booking__airport">Miami Intl,Miami</div>
+                        </div>
+                        <div class="booking__dates">
+                            <div class="booking__departure">
+                                <div class="booking__title">departure</div>
+                                <div class="booking__date">Fri 15 Oct</div>
+                                <i class="fa-regular fa-calendar booking__calendar"></i>
+                                <div class="booking__buttons">
+                                    <span class="booking__btn">Prev</span>
+                                    <span class="booking__btn">Next</span>
+                                </div>
+                            </div>
+                            <div class="booking__return">
+                                <div class="booking__title">return</div>
+                                <div class="booking__date">Tue 19 Oct</div>
+                                <i class="fa-regular fa-calendar booking__calendar"></i>
+                                <div class="booking__buttons">
+                                    <span class="booking__btn">Prev</span>
+                                    <span class="booking__btn">Next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking__footer">
+                        Add Requirements
+                    </div>
+                    <button class="booking__button">Book Flights <img src="scr/img/icons/arrow-right-white.svg"
+                            alt="arrow" class="white-arrow"></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://kit.fontawesome.com/1861cbff23.js" crossorigin="anonymous"></script>
+
 </html>
