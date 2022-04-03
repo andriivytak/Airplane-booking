@@ -588,3 +588,148 @@ body {
   color: #151515;
   text-transform: capitalize;
 }
+
+
+/* Membership */
+
+.membership {
+  display: flex;
+  justify-content: space-between;
+}
+
+.membership__card {
+  cursor: pointer;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  border-radius: 20px;
+  padding: 24px;
+  transition: all .4s linear;
+}
+
+.membership__body {
+  flex: 1 1 0;
+  border-bottom: 1px dashed #A9A9AA;
+  margin-bottom: 65px;
+}
+
+.membership__type {
+  font-weight: 700;
+  font-size: 32px;
+  color: #151515;
+  margin-bottom: 32px;
+}
+
+.membership__get {
+  font-weight: 400;
+  font-size: 22px;
+  color: #A9A9AA;
+  margin-bottom: 25px;
+}
+
+.membership__features-item {
+  margin-bottom: 16px;
+}
+
+.membership__checkbox {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.membership__features-desc {
+  display: inline-block;
+  color: #151515;
+}
+
+.membership__cost {
+  color: #161616;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.membership__cost b {
+  font-size: 32px;
+
+}
+
+.membership__button {
+  position: relative;
+  font-weight: 600;
+  text-align: center;
+  color: #FFF;
+  background: #656293;
+  border-radius: 12px;
+  transition: all .4s linear;
+  width: 100%;
+  max-width: 308px;
+  height: 64px;
+  overflow: hidden;
+}
+
+
+.membership__button::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -275px;
+  background-color: #151515;
+  height: 3px;
+  width: 90%;
+  transition: all .4s linear;
+}
+
+.membership__button::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: -275px;
+  background-color: #151515;
+  height: 3px;
+  width: 90%;
+  transition: all .4s linear;
+}
+
+.membership__button:hover::before {
+  margin-left: 290px;
+}
+
+.membership__button:hover::after {
+  margin-right: 290px;
+}
+
+
+
+.membership__card:hover {
+  background-color: #656293;
+  transform: translateY(-20px);
+}
+
+.membership__card:hover .membership__features-desc {
+  color: #FFF;
+}
+
+.membership__card:hover .membership__cost {
+  color: #FFF;
+}
+
+.membership__card:hover .membership__type {
+  color: #FFF;
+}
+
+.membership__card:hover .membership__button {
+  background-color: #FFF;
+  color: #151515
+}
+
+.membership__card:hover .membership__get {
+  color: #FFF;
+  opacity: .8;
+}
+
+
+.membership__card:hover .membership__button:hover {
+  box-shadow: 0px 0px 0px 2.5px white inset, 0px 0px 0px 5px #000;
+  letter-spacing: 5px;
+
+}
