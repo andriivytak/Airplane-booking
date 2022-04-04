@@ -610,8 +610,6 @@ body {
   padding: 40px 52px 52px;
 }
 
-
-
 .card:hover .back {
   transform: rotateY(0deg);
 }
@@ -658,19 +656,64 @@ body {
 }
 
 .luxury__card {
-  width: 23%;
-  background-color: #FFF;
-  padding: 15px 12px;
+  width: 255px;
+  height: 255px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.luxury__card:hover {
+  transform: translateY(20px);
+}
+
+.luxury__card:hover:before {
+  opacity: 1;
+}
+
+.luxury__card:hover .luxury__info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.luxury__card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.luxury__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.luxury__info {
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
   text-align: center;
-  border-radius: 10px;
-}
-
-.luxury__image {
-  margin-bottom: 15px;
-}
-
-.luxury__model {
-  color: #151515;
   text-transform: capitalize;
 }
 
@@ -889,3 +932,19 @@ body {
   text-transform: capitalize;
   font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cardi */
