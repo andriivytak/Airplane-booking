@@ -535,6 +535,7 @@ body {
 
 .chapter__img {
   border-radius: 20px;
+  display: block;
 }
 
 .chapter__content {

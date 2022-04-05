@@ -6,6 +6,34 @@ const perfomanceIcons = document.querySelectorAll('.card');
 const airPlane = document.querySelector('.perfomance__airplane');
 const luxury = document.querySelector('.luxury');
 const memberShip = document.querySelector('.membership');
+
+const lazyImages = document.querySelectorAll('img[data-src]');
+let lazyImagesPositions = [];
+const windowHeight = document.documentElement.clientHeight;
+
+if (lazyImages.length > 0) {
+    lazyImages.forEach(img => {
+        if (img.dataset.src) {
+            lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset);
+        }
+    });
+}
+
+function lazyScrollCheck() {
+    let imgIndex = lazyImagesPositions.findIndex(
+        item => pageYOffset > item - windowHeight
+    );
+
+    if (imgIndex >= 0) {
+        if (lazyImages[imgIndex].dataset.src) {
+            lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+            lazyImages[imgIndex].removeAttribute('data-src');
+        }
+        delete lazyImagesPositions[imgIndex];
+        lazyScrollCheck();
+    }
+}
+
 buttonRevert.addEventListener('click', () => {
     [destinations[0].innerHTML, destinations[1].innerHTML] = [destinations[1].innerHTML, destinations[0].innerHTML];
 
@@ -13,7 +41,7 @@ buttonRevert.addEventListener('click', () => {
 
 
 window.addEventListener('scroll', () => {
-
+    lazyScrollCheck();
     if (window.scrollY > 250) {
         booking.classList.add('visible');
     }
