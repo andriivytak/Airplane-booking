@@ -1,3 +1,4 @@
+
 const destinations = document.querySelectorAll('.booking__destination');
 const buttonRevert = document.querySelector('.booking__revert');
 const chapterItem = document.querySelectorAll('.chapter__item');
@@ -10,6 +11,8 @@ const memberShip = document.querySelector('.membership');
 const lazyImages = document.querySelectorAll('img[data-src]');
 let lazyImagesPositions = [];
 const windowHeight = document.documentElement.clientHeight;
+
+
 
 if (lazyImages.length > 0) {
     lazyImages.forEach(img => {
@@ -75,3 +78,102 @@ window.addEventListener('scroll', () => {
         memberShip.classList.add('lazy');
     }
 });
+
+// Datepicker
+
+const departureDate = document.querySelector('input[name="datepicker-departure"]');
+const returnDate = document.querySelector('input[name="datepicker-return"]');
+let prev = document.querySelectorAll('.booking__prev');
+let next = document.querySelectorAll('.booking__next');
+
+const departureDatePicker = new Datepicker(departureDate, {
+    autohide: true,
+    format: 'D dd M',
+    orientation: 'left',
+    todayHighlight: true,
+
+    beforeShowDay(date) {
+        if (date < new Date()) {
+            return false;
+        }
+    }
+});
+
+
+const returnDatePicker = new Datepicker(returnDate, {
+    autohide: true,
+    format: 'D dd M',
+    orientation: 'left',
+    todayHighlight: true
+});
+
+
+// updateData = (dateInput, datapicker, index) => {
+//     dateInput.addEventListener('changeDate', () => {
+//         datapicker.dates.forEach(el => {
+//             prev[index].addEventListener('click', () => {
+//                 // if (el >= new Date()) {
+//                 el = el - 86400000;
+//                 datapicker.setDate(el);
+//                 // }
+//             });
+//             next[index].addEventListener('click', () => {
+//                 el = el + 86400000;
+//                 datapicker.setDate(el);
+//             });
+//         });
+
+//     });
+// };
+
+
+departureDate.addEventListener('changeDate', () => {
+    departureDatePicker.dates.forEach(el => {
+
+
+
+        prev[0].addEventListener('click', () => {
+            if (el >= new Date()) {
+                el = el - 86400000;
+                departureDatePicker.setDate(el);
+            }
+        });
+
+        next[0].addEventListener('click', () => {
+            el = el + 86400000;
+            departureDatePicker.setDate(el);
+        });
+
+
+
+
+    });
+});
+
+
+
+
+
+
+
+returnDate.addEventListener('changeDate', () => {
+
+    returnDatePicker.dates.forEach(el => {
+
+        prev[1].addEventListener('click', () => {
+            if (el >= Date.now()) {
+                el = el - 86400000;
+                returnDatePicker.setDate(el);
+            }
+        });
+
+        next[1].addEventListener('click', () => {
+            el = el + 86400000;
+            returnDatePicker.setDate(el);
+        });
+
+    })
+});
+
+// updateData(departureDate, departureDatePicker, 0);
+// updateData(returnDate, returnDatePicker, 1);

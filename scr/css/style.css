@@ -32,7 +32,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  /* background-color: #E5E5E5; */
   background-color: #e6e6fa;
 }
 
@@ -558,7 +557,6 @@ body {
 }
 
 .chapter__rectange {
-  /* background-color: #FFFACD; */
   background-color: #FFF5EE;
   width: 400px;
   opacity: .8;
@@ -1020,4 +1018,28 @@ body {
   color: rgba(255, 255, 255, 0.7);
   text-transform: capitalize;
   font-size: 14px;
+}
+
+
+
+.date__picker {
+
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  width: 140px;
+  cursor: pointer;
+}
+
+.date__picker:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+
+
+.datepicker-cell.today:not(.selected):not(.disabled) {
+  color: #fff;
+  background-color: #656293;
 }

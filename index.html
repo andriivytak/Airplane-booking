@@ -8,7 +8,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="scr/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+
     <title>Airplane tickets</title>
 </head>
 
@@ -121,20 +124,18 @@
                         <div class="booking__dates">
                             <div class="booking__departure">
                                 <div class="booking__title">departure</div>
-                                <div class="booking__date">Fri 15 Oct</div>
-                                <img src="scr/img/icons/calendar.svg" class=" booking__calendar" alt="">
+                                <input type="text" name="datepicker-departure" class="date__picker" readonly value="1">
                                 <div class="booking__buttons">
-                                    <span class="booking__btn">Prev</span>
-                                    <span class="booking__btn">Next</span>
+                                    <span class="booking__btn booking__prev">Prev</span>
+                                    <span class="booking__btn booking__next">Next</span>
                                 </div>
                             </div>
                             <div class="booking__return">
                                 <div class="booking__title">return</div>
-                                <div class="booking__date">Tue 19 Oct</div>
-                                <img src="scr/img/icons/calendar.svg" class=" booking__calendar" alt="">
+                                <input type="text" name="datepicker-return" class="date__picker" readonly value="1">
                                 <div class="booking__buttons">
-                                    <span class="booking__btn">Prev</span>
-                                    <span class="booking__btn">Next</span>
+                                    <span class="booking__btn booking__prev">Prev</span>
+                                    <span class="booking__btn booking__next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -483,9 +484,14 @@
                     <div class="footer__rights">© 2022 Air. All rights reserved.</div>
                 </div>
             </div>
+
         </footer>
     </div>
+
+
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
 <script src="scr/js/app.js"></script>
 
 </html>
