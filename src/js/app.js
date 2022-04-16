@@ -1,4 +1,3 @@
-
 const destinations = document.querySelectorAll('.booking__destination');
 const buttonRevert = document.querySelector('.booking__revert');
 const chapterItem = document.querySelectorAll('.chapter__item');
@@ -80,7 +79,6 @@ window.addEventListener('scroll', () => {
 });
 
 // Datepicker
-
 const departureDate = document.querySelector('input[name="datepicker-departure"]');
 const returnDate = document.querySelector('input[name="datepicker-return"]');
 let prev = document.querySelectorAll('.booking__prev');
@@ -175,5 +173,7 @@ returnDate.addEventListener('changeDate', () => {
     })
 });
 
+
+console.log('Hello')
 // updateData(departureDate, departureDatePicker, 0);
 // updateData(returnDate, returnDatePicker, 1);
