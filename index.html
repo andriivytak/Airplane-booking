@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,42 +18,45 @@
 
 <body>
     <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+                <nav class="header__navbar">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="src/img/Logo.svg" alt="logos">
+                        </a>
+                    </div>
+                    <ul class="header__links">
+                        <a href="" class="header__links-item">
+                            <li>Home </li>
+                        </a>
+                        <a href="" class="header__links-item">
+                            <li>Booking</li>
+                        </a>
+                        <a href="" class="header__links-item">
+                            <li>Private Jet</li>
+                        </a>
+                        <a href="" class="header__links-item">
+                            <li>Specification</li>
+                        </a>
+                        <a href="" class="header__links-item">
+                            <li> Luxury Charters</li>
+                        </a>
+                        <a href="" class="header__links-item">
+                            <li>Membership</li>
+                        </a>
+                    </ul>
+                    <div class="header__buttons">
+                        <button class="header__button">Register</button>
+                        <button class="header__button">Sign In</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
         <div class="intro">
             <div class="container">
-                <header class="header">
-                    <nav class="header__navbar">
-                        <div class="header__logo">
-                            <a href="#">
-                                <img src="src/img/Logo.svg" alt="logos">
-                            </a>
-                        </div>
-                        <ul class="header__links">
-                            <a href="" class="header__links-item">
-                                <li>Home </li>
-                            </a>
-                            <a href="" class="header__links-item">
-                                <li>Booking</li>
-                            </a>
-                            <a href="" class="header__links-item">
-                                <li>Private Jet</li>
-                            </a>
-                            <a href="" class="header__links-item">
-                                <li>Specification</li>
-                            </a>
-                            <a href="" class="header__links-item">
-                                <li> Luxury Charters</li>
-                            </a>
-                            <a href="" class="header__links-item">
-                                <li>Membership</li>
-                            </a>
-                        </ul>
-                        <div class="header__buttons">
-                            <button class="header__button">Register</button>
-                            <button class="header__button">Sign In</button>
-                        </div>
-                    </nav>
-                </header>
-
                 <div class="intro__inner">
                     <h1 class="intro__title">Enjoy <b> Reserved </b></h1>
                     <h2 class="intro__subtitle"> Overhead bin space</h2>
@@ -68,41 +72,59 @@
             <div class="container">
                 <div class="booking__inner">
                     <div class="booking__header">
-                        <ul class="booking__dropdowns">
-
-                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
-                                    <img src="src/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
-                                        class="dropdown-arrow">
-                                </a>
-
-                                <ul class="booking__dropdown">
-                                    <li class="dropdown__item"><a href="#">Option 1</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 2</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 3</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 4</a></li>
-
+                        <ul class="booking__list">
+                            <li class="booking__link">
+                                <div class="booking__link-header">Round Trip</div>
+                                <span class="booking__arrow"></span>
+                                <ul class="booking__sub-list">
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
-                                    <img src="src/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
-                                        class="dropdown-arrow">
-                                </a>
-                                <ul class="booking__dropdown">
-                                    <li class="dropdown__item"><a href="#">Option 5</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 6</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 7</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 8</a></li>
+                            <li class="booking__link">
+                                <div class="booking__link-header"> Round Trip</div>
+                                <span class="booking__arrow"></span>
+                                <ul class="booking__sub-list">
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
-                                    <img src="src/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
-                                        class="dropdown-arrow">
-                                </a>
-                                <ul class="booking__dropdown">
-                                    <li class="dropdown__item"><a href="#">Option 9</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 11</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 12</a></li>
-                                    <li class="dropdown__item"><a href="#">Option 13</a></li>
+                            <li class="booking__link">
+                                <div class="booking__link-header">Round Trip</div>
+                                <span class="booking__arrow"></span>
+                                <ul class="booking__sub-list">
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="booking__sub-link">Option 1</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -111,7 +133,7 @@
                         <div class="booking__destination">
                             <div class="booking__title">from</div>
                             <div class="booking__abbreviation">lax</div>
-                            <div class="booking__airport">Los Angeles Intl Arpt,Los Angeles</div>
+                            <div class="booking__airport">Los Angeles</div>
                         </div>
                         <div class="booking__reverse">
                             <img src="src/img/icons/arrow-right-arrow-left-solid.svg" class="booking__revert" alt="">
@@ -409,7 +431,7 @@
                             <button class="membership__button">Choose</button>
                         </div>
                     </div>
-                    <div class="membership__card">
+                    <div class="membership__card membership__card-three">
                         <div class="membership__header">
                             <h3 class="membership__type">
                                 Popular
