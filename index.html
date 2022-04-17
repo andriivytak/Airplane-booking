@@ -20,38 +20,32 @@
     <div class="wrapper">
 
         <header class="header">
-            <div class="container">
-                <nav class="header__navbar">
-                    <div class="header__logo">
-                        <a href="#">
-                            <img src="src/img/Logo.svg" alt="logos">
-                        </a>
+            <div class="header__container">
+                <div class="header__logo">
+                    <a href="#">
+                        <img src="src/img/Logo.svg" alt="logos">
+                    </a>
+                </div>
+
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
                     </div>
-                    <ul class="header__links">
-                        <a href="" class="header__links-item">
-                            <li>Home </li>
-                        </a>
-                        <a href="" class="header__links-item">
-                            <li>Booking</li>
-                        </a>
-                        <a href="" class="header__links-item">
-                            <li>Private Jet</li>
-                        </a>
-                        <a href="" class="header__links-item">
-                            <li>Specification</li>
-                        </a>
-                        <a href="" class="header__links-item">
-                            <li> Luxury Charters</li>
-                        </a>
-                        <a href="" class="header__links-item">
-                            <li>Membership</li>
-                        </a>
-                    </ul>
-                    <div class="header__buttons">
-                        <button class="header__button">Register</button>
-                        <button class="header__button">Sign In</button>
-                    </div>
-                </nav>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".intro" href="#" class="menu__link">Home</a></li>
+                            <li><a data-goto=".booking" href="#" class="menu__link">Booking</a></li>
+                            <li><a data-goto=".section-chapter" href="#" class="menu__link">Private Jet</a></li>
+                            <li><a data-goto=".section-perfomance" href="#" class="menu__link">Specification</a></li>
+                            <li><a data-goto=".section-luxury" href="#" class="menu__link">Luxury chapter</a></li>
+                            <li><a data-goto=".section-membership" href="#" class="menu__link">Membership</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__buttons">
+                    <button class="header__button">Register</button>
+                    <button class="header__button">Sign In</button>
+                </div>
             </div>
         </header>
 
@@ -211,7 +205,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section section-perfomance">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">
@@ -288,7 +282,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section section-luxury">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">
@@ -330,7 +324,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section section-membership">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">
