@@ -177,3 +177,56 @@ returnDate.addEventListener('changeDate', () => {
 console.log('Hello')
 // updateData(departureDate, departureDatePicker, 0);
 // updateData(returnDate, returnDatePicker, 1);
+
+
+
+// Check for touch screen
+
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows());
+    }
+};
+
+let bookingArrows = document.querySelectorAll('.booking__arrow');
+let bookingHeaders = document.querySelectorAll('.booking__link-header');
+
+if (isMobile.any()) {
+    document.body.classList.add('_touch')
+
+    bookingArrows.forEach(el => {
+        el.addEventListener('click', () => {
+            el.parentElement.classList.toggle('_active');
+        });
+    });
+
+    bookingHeaders.forEach(el => {
+        el.addEventListener('click', () => {
+            el.parentElement.classList.toggle('_active')
+        })
+
+    });
+
+} else {
+    document.body.classList.add('_pc')
+}
